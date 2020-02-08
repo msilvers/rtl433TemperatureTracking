@@ -66,7 +66,7 @@ DROP procedure IF EXISTS `rtl433`.`sensorReadingInsert`;
 
 DELIMITER $$
 USE `rtl433`$$
-CREATE DEFINER=`msilvers`@`%.main.nova42.test` PROCEDURE `sensorReadingInsert`(sensorId VARCHAR(25), dateRecorded DATETIME, batteryLow TINYINT(1),
+CREATE PROCEDURE `sensorReadingInsert`(sensorId VARCHAR(25), dateRecorded DATETIME, batteryLow TINYINT(1),
                                         temperatureCelsius DECIMAL(5,2), humidity DECIMAL(5,2))
 BEGIN
 
